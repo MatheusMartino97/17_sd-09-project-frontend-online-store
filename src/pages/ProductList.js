@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Categories from '../components/Categories';
 
 class ProductsList extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class ProductsList extends React.Component {
         <h3 data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </h3>
+        <Categories />
       </div>
     );
   }

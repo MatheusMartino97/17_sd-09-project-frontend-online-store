@@ -1,5 +1,7 @@
 import React from 'react';
 import * as mlbAPI from '../services/api';
+import { Link } from 'react-router-dom';
+import Categories from '../components/Categories';
 
 class ProductsList extends React.Component {
   constructor(props) {
@@ -66,6 +68,12 @@ class ProductsList extends React.Component {
         <div>
           { this.toBeShown() }
         </div>
+        <Link data-testid="shopping-cart-button" to="/meucarrinho">carrinho</Link>
+        <input value={ searchText } onChange={ (event) => this.changeHandler(event) } />
+        <h3 data-testid="home-initial-message">
+          Digite algum termo de pesquisa ou escolha uma categoria.
+        </h3>
+        <Categories />
       </div>
     );
   }

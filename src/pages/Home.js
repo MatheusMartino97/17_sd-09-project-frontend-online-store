@@ -30,7 +30,7 @@ class Home extends React.Component {
     this.fetchProductIdAndQuery(category);
   }
 
-  // salva as modificações de texto do input no estado
+  // salva as modificações de texto do input no estado =D
   changeHandler(event) {
     this.setState({ searchText: event.target.value });
   }

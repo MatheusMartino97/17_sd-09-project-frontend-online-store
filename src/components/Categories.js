@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as api from '../services/api';
-import Category from './Category';
 
 class Categories extends React.Component {
   constructor(props) {
@@ -36,7 +35,16 @@ class Categories extends React.Component {
 
     const categories = allCategories
       .map((categoryMap) => (
-        <Category key={ categoryMap.id } category={ categoryMap } />
+        <label key={ categoryMap.id } htmlFor={ categoryMap.id }>
+          <input
+            data-testid="category"
+            type="radio"
+            id={ categoryMap.id }
+            name="category"
+            value={ categoryMap.name }
+          />
+          <li>{ categoryMap.name }</li>
+        </label>
       ));
     return <ul onChange={ this.handleChange }>{ categories }</ul>;
   }

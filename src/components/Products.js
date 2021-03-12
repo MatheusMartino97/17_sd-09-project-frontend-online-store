@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Product from './Product';
 
 class Products extends React.Component {
   render() {
@@ -11,11 +12,7 @@ class Products extends React.Component {
     if (products) {
       return products
         .map((product) => (
-          <div key={ product.id } data-testid="product">
-            <h1>{ product.title }</h1>
-            <img src={ product.thumbnail } alt="product" />
-            <div>{product.price}</div>
-          </div>
+          <Product key={ product.id } product={ product } />
         ));
     }
   }

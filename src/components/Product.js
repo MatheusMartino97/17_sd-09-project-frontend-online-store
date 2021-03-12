@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Product extends React.Component {
   constructor(props) {
@@ -68,6 +69,15 @@ class Product extends React.Component {
         <p type="number" data-testid="shopping-cart-product-quantity">
           { product.quantity }
         </p>
+        <Link
+          to={ {
+            pathname: `/details/${product.id}`,
+            state: { product },
+          } }
+          data-testid="product-detail-link"
+        >
+          Detalhes
+        </Link>
       </div>
     );
   }

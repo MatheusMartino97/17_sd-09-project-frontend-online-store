@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Product from './Product';
 
 class ProductDetails extends Component {
   render() {
-    const { title, thumbnail, price, condition } = this.props;
-
+    const { title, condition, product } = this.props;
     return (
       <div>
+        <Product product={ product } tag="product-detail-add-to-cart" />
         <h3 data-testid="product-detail-name">{ title }</h3>
-        <img src={ thumbnail } alt="product" />
-        <p>{`R$${price}`}</p>
         <h4>Especificações Técnicas: </h4>
         <ul>
           <li>{ condition }</li>
         </ul>
-        <Link to="/meucarrinho">Carrinho</Link>
+        <Link data-testid="shopping-cart-button" to="/meucarrinho">Carrinho</Link>
       </div>
     );
   }
@@ -26,6 +25,7 @@ ProductDetails.propTypes = {
   thumbnail: PropTypes.string,
   price: PropTypes.string,
   condition: PropTypes.string,
+  product: PropTypes.object,
 }.isRequired;
 
 export default ProductDetails;

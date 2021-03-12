@@ -53,7 +53,7 @@ class Product extends React.Component {
   }
 
   render() {
-    const { product } = this.props;
+    const { product, tag } = this.props;
     return (
       <div data-testid="product">
         <h1 data-testid="shopping-cart-product-name">{ product.title }</h1>
@@ -62,7 +62,7 @@ class Product extends React.Component {
         <button
           onClick={ this.handleClick }
           type="button"
-          data-testid="product-add-to-cart"
+          data-testid={ tag }
         >
           add carrinho
         </button>

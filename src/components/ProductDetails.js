@@ -9,6 +9,7 @@ class ProductDetails extends Component {
       <div>
         <h3 data-testid="product-detail-name">{ title }</h3>
         <img src={ thumbnail } alt="product" />
+        <p>{`R$${price}`}</p>
         <h4>Especificações Técnicas: </h4>
         <ul>
           <li>{warranty}</li>

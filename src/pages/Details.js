@@ -14,16 +14,19 @@ class Details extends Component {
       price: '',
       warranty: '',
     };
-  }
 
-  componentDidMount() {
     this.fetchProductById();
   }
+
+  // componentDidMount() {
+  // }
 
   async fetchProductById() {
     const { match } = this.props;
     const { params } = match;
     const request = await api.getProductById(params.id);
+
+    console.log(request[0])
 
     const { title, thumbnail, price, warranty } = request[0].body;
 

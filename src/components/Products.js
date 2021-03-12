@@ -7,15 +7,21 @@ class Products extends React.Component {
     const { products } = this.props;
 
     if (products.length === 0) {
-      return (<div>Nenhum produto foi encontrado.</div>);
+      return <div>Nenhum produto foi encontrado.</div>;
     }
     if (products) {
       return products.map((product) => (
         <div key={ product.id } data-testid="product">
           <h1>{product.title}</h1>
           <img src={ product.thumbnail } alt="product" />
-          <div>{ product.price }</div>
-          <Link to={ `/details/${product.id}` } data-testid="product-detail-link">
+          <div>{product.price}</div>
+          <Link
+            to={ {
+              pathname: `/details/${product.id}`,
+              state: { product },
+            } }
+            data-testid="product-detail-link"
+          >
             Detalhes
           </Link>
         </div>

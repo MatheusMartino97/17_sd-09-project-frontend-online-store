@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class ProductDetails extends Component {
   render() {
-    const { title, thumbnail, price, warranty } = this.props;
+    const { title, thumbnail, price, condition } = this.props;
 
     return (
       <div>
@@ -12,12 +13,19 @@ class ProductDetails extends Component {
         <p>{`R$${price}`}</p>
         <h4>Especificações Técnicas: </h4>
         <ul>
-          <li>{warranty}</li>
+          <li>{ condition }</li>
         </ul>
         <Link to="/meucarrinho">Carrinho</Link>
       </div>
     );
   }
 }
+
+ProductDetails.propTypes = {
+  title: PropTypes.string,
+  thumbnail: PropTypes.string,
+  price: PropTypes.string,
+  condition: PropTypes.string,
+}.isRequired;
 
 export default ProductDetails;

@@ -18,6 +18,3 @@ export async function getProductById(itemId) {
   const endpointResponse = await endpointRequest.json();
   return endpointResponse;
 }
-
-// /items?ids=$ITEM_ID1,$ITEM_ID2
-// https://api.mercadolibre.com/items?ids=MLA599260060,MLA594239600

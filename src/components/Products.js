@@ -3,6 +3,22 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class Products extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // const { products } = this.props;
+
+    // this.state = {
+    //   products,
+    // }
+
+    this.stateProps = this.stateProps.bind(this);
+  }
+
+  stateProps() {
+    return this.props;
+  }
+
   render() {
     const { products } = this.props;
 

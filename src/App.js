@@ -8,7 +8,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route path="/meucarrinho" component={ ShoppingCart } />
-        <Route path="/details/:id" render={ (props) => <Details { ...props } /> } />
+        <Route path="/details/:id/" render={ (props) => <Details { ...props } /> } />
       </Switch>
     </BrowserRouter>
   );

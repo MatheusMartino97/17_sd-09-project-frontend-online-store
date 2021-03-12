@@ -8,15 +8,14 @@ class Details extends Component {
     const { state } = location;
     const { product } = state;
 
-    const { title, thumbnail, price, condition } = product;
+    const { title, condition } = product;
 
     return (
       <div>
         <ProductDetails
           title={ title }
-          thumbnail={ thumbnail }
-          price={ price }
           condition={ condition }
+          product={ product }
         />
       </div>
     );

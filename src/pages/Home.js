@@ -76,11 +76,13 @@ class Home extends React.Component {
         <h3 data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </h3>
-        <Products
-          products={ products }
-          seedStateProducts={ this.seedStateProducts }
-        />
-        <Categories getCategory={ this.getCategory } />
+        <div className="home-main">
+          <Categories getCategory={ this.getCategory } />
+          <Products
+            products={ products }
+            seedStateProducts={ this.seedStateProducts }
+          />
+        </div>
       </div>
     );
   }

@@ -9,3 +9,31 @@
   width: 100px;
   height: 100px;
 }
+
+.home-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: 25%;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.categories, .product-card {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  list-style: none;
+  height: min-content;
+}
+
+.category {
+  display: flex;
+}

@@ -10,10 +10,17 @@ class Products extends React.Component {
       return <div>Nenhum produto foi encontrado.</div>;
     }
     if (products) {
-      return products
-        .map((product) => (
-          <Product key={ product.id } product={ product } tag="product-add-to-cart" />
-        ));
+      return (
+        <div className="products">
+          {products.map((product) => (
+            <Product
+              key={ product.id }
+              product={ product }
+              tag="product-add-to-cart"
+            />
+          ))}
+        </div>
+      );
     }
   }
 }

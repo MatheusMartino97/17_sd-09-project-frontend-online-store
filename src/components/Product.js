@@ -55,8 +55,8 @@ class Product extends React.Component {
   render() {
     const { product, tag } = this.props;
     return (
-      <div data-testid="product">
-        <h1 data-testid="shopping-cart-product-name">{ product.title }</h1>
+      <div className="product-card" data-testid="product">
+        <h3 data-testid="shopping-cart-product-name">{ product.title }</h3>
         <img src={ product.thumbnail } alt="product" />
         <div>{product.price}</div>
         <button

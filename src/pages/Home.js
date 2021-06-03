@@ -43,31 +43,43 @@ class Home extends React.Component {
 
   // busca e salva lista de produtos por parametro 'categoryId' e 'searchText'
   async fetchProductIdAndQuery(categoryId, searchText = '') {
-    const { results } = await api.getProductsFromCategoryAndQuery(categoryId, searchText);
+    const { results } = await api.getProductsFromCategoryAndQuery(
+      categoryId,
+      searchText,
+    );
     this.setState({ products: results });
   }
 
   render() {
     const { searchText, products } = this.state;
     return (
-      <div>
-        <Link data-testid="shopping-cart-button" to="/meucarrinho">carrinho</Link>
-        <input
-          data-testid="query-input"
-          value={ searchText }
-          onChange={ (event) => this.changeHandler(event) }
-        />
-        <button
-          data-testid="query-button"
-          type="button"
-          onClick={ this.handleClick }
-        >
-          Pesquisar
-        </button>
+      <div id="home-page">
+        <header className="home-header">
+          <div>
+            <input
+              data-testid="query-input"
+              value={ searchText }
+              onChange={ (event) => this.changeHandler(event) }
+            />
+            <button
+              data-testid="query-button"
+              type="button"
+              onClick={ this.handleClick }
+            >
+              Pesquisar
+            </button>
+          </div>
+          <Link data-testid="shopping-cart-button" to="/meucarrinho">
+            carrinho
+          </Link>
+        </header>
         <h3 data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </h3>
-        <Products products={ products } seedStateProducts={ this.seedStateProducts } />
+        <Products
+          products={ products }
+          seedStateProducts={ this.seedStateProducts }
+        />
         <Categories getCategory={ this.getCategory } />
       </div>
     );

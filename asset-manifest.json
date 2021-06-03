@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/17_sd-09-project-frontend-online-store/static/css/main.22edfa0f.chunk.css",
+    "main.js": "/17_sd-09-project-frontend-online-store/static/js/main.b9a945a3.chunk.js",
+    "main.js.map": "/17_sd-09-project-frontend-online-store/static/js/main.b9a945a3.chunk.js.map",
+    "runtime-main.js": "/17_sd-09-project-frontend-online-store/static/js/runtime-main.0a2d4fb4.js",
+    "runtime-main.js.map": "/17_sd-09-project-frontend-online-store/static/js/runtime-main.0a2d4fb4.js.map",
+    "static/js/2.2dbdbaa7.chunk.js": "/17_sd-09-project-frontend-online-store/static/js/2.2dbdbaa7.chunk.js",
+    "static/js/2.2dbdbaa7.chunk.js.map": "/17_sd-09-project-frontend-online-store/static/js/2.2dbdbaa7.chunk.js.map",
+    "index.html": "/17_sd-09-project-frontend-online-store/index.html",
+    "precache-manifest.0382813ee831b032e361066cbfb62cce.js": "/17_sd-09-project-frontend-online-store/precache-manifest.0382813ee831b032e361066cbfb62cce.js",
+    "service-worker.js": "/17_sd-09-project-frontend-online-store/service-worker.js",
+    "static/css/main.22edfa0f.chunk.css.map": "/17_sd-09-project-frontend-online-store/static/css/main.22edfa0f.chunk.css.map",
+    "static/js/2.2dbdbaa7.chunk.js.LICENSE.txt": "/17_sd-09-project-frontend-online-store/static/js/2.2dbdbaa7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a2d4fb4.js",
+    "static/js/2.2dbdbaa7.chunk.js",
+    "static/css/main.22edfa0f.chunk.css",
+    "static/js/main.b9a945a3.chunk.js"
+  ]
+}
